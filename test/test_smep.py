@@ -1,4 +1,4 @@
-"""Tests entrypoint scripts under different sourcedir.
+"""Tests SageMaker entrypoint scripts under different sourcedirs.
 
 Demonstrate good vs bad practices, where the good practice ensures no conflicting
 package name across all sourcedirs.
