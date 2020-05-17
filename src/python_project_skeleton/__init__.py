@@ -1,4 +1,5 @@
 import pathlib
+
 import pkg_resources
 
 _pkg_dir: pathlib.Path = pathlib.Path(__file__).resolve().parent
