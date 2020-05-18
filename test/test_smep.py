@@ -17,14 +17,16 @@ def smep01_bad_modname(root_dir, monkeypatch, helpers):
 
 
 @pytest.mark.parametrize("name", ["smep01", "smep02"])
-def test_good_train(root_dir, helpers, smep01_bad_modname, name):
+def test_good_train(root_dir, monkeypatch, helpers, smep01_bad_modname, name):
+    monkeypatch.syspath_prepend(root_dir / "src" / name)
     train = helpers.import_from_file(f"{name}_train", root_dir / "src" / name / "train.py")
     print(train.good_main())
     assert train.good_main() == f"{name}: train"
 
 
 @pytest.mark.parametrize("name", ["smep01", "smep02"])
-def test_good_inference(root_dir, helpers, smep01_bad_modname, name):
+def test_good_inference(root_dir, monkeypatch, helpers, smep01_bad_modname, name):
+    monkeypatch.syspath_prepend(root_dir / "src" / name)
     inference = helpers.import_from_file(f"{name}_inference", root_dir / "src" / name / "inference.py")
     print(inference.good_model_fn())
     assert inference.good_model_fn() == f"{name}: inference"
