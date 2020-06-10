@@ -1,0 +1,13 @@
+numpy
+pandas
+matplotlib
+scikit-learn
+jupyter
+botocore
+boto3
+pytest
+tox
+sphinx
+black
+flake8
+pydocstyle
