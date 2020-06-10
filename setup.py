@@ -17,7 +17,8 @@ required_packages = ["boto3", "paramiko>= 2.7.0"]
 
 setup(
     name=_pkg,
-    packages=find_packages(),
+    packages=find_packages(where="src"),
+    package_dir={"": "src"},
     entry_points={"console_scripts": [f"{_pkg} = {_pkg}.__main__:main"]},
     version=read_version(),
     description="This package does x,y,z.",
