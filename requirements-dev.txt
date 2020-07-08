@@ -9,3 +9,4 @@ rope
 tox
 sphinx
 pre-commit
+setupext-janitor

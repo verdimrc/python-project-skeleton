@@ -12,7 +12,7 @@ def read(fname):
 
 
 # Declare minimal set for installation
-required_packages = ["boto3", "paramiko>= 2.7.0"]
+required_packages = []
 
 setup(
     name=_pkg,
