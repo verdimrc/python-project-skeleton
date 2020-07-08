@@ -19,3 +19,4 @@
 *.tar.gz binary
 *.pickle binary
 *.zip binary
+src/python_project_skeleton/_version.py export-subst

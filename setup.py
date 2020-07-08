@@ -1,15 +1,14 @@
 import os
+
 from setuptools import find_packages, setup
+
+import versioneer
 
 _pkg: str = "python_project_skeleton"
 
 
 def read(fname):
     return open(os.path.join(os.path.dirname(__file__), fname)).read()
-
-
-def read_version():
-    return read("VERSION").strip()
 
 
 # Declare minimal set for installation
@@ -20,7 +19,8 @@ setup(
     packages=find_packages(where="src"),
     package_dir={"": "src"},
     entry_points={"console_scripts": [f"{_pkg} = {_pkg}.__main__:main"]},
-    version=read_version(),
+    version=versioneer.get_version(),
+    cmdclass=versioneer.get_cmdclass(),
     description="This package does x,y,z.",
     long_description=read("README.md"),
     author="Firstname Lastname",

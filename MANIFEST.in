@@ -1,1 +1,2 @@
-include VERSION
+include versioneer.py
+include src/python_project_skeleton/_version.py
