@@ -1,0 +1,11 @@
+autoflake
+black
+flake8
+pydocstyle
+pytest
+mypy
+isort>=5
+rope
+tox
+sphinx
+pre-commit
