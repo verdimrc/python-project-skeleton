@@ -29,8 +29,8 @@ def download_objects(s3_client, bucket, s3_keys, local_dir, verbose=False):
         bucket (str): the bucket name.
         s3_keys (list[str]): the path to the s3 object along with the object name.
         local_dir (str): where the files should be downloaded toi.
-        verbose (bool): whether to print out files as they are being downloaded. 
-    
+        verbose (bool): whether to print out files as they are being downloaded.
+
     Returns:
         List of local files and their location.
     """
@@ -76,8 +76,8 @@ def upload_object(s3_client, bucket, local_key, s3_key=None, verbose=False):
         bucket (str): the bucket name.
         s3_key (str): the path to the s3 object along with the object name.
         local_key (str): where the files should be downloaded to and file name.
-        verbose (bool): whether to print out a file as it is being downloaded. 
-    
+        verbose (bool): whether to print out a file as it is being downloaded.
+
     Returns:
         True if file was uploaded, else False.
    """
@@ -103,7 +103,7 @@ def list_objects(s3_client, bucket, prefix="", extensions=None, max_items=214748
         extensions (str, list, optional): file extensions to filter results by
         max_items (int, optional): only return a subset of items
     Returns:
-        keys (list of strings): files within the bucket matching all of the 
+        keys (list of strings): files within the bucket matching all of the
             conditions. Files will include prefix.
     Examples:
         >>> s3_client = boto3.client('s3')
